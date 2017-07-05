@@ -1,12 +1,12 @@
-# Angular 表單和回應式表單（Reactive Form）範例
+# Angular 表單和反應式表單（Reactive Form）範例
 
-## 建立一個回應式表單和綁定在模板上
+## 建立一個反應式表單和繫結在模板上
 - 建立一個`FormGroup`的實體
   - 透過自行匯入`FormGroup`的`Class`後`new`一個實體。或
   - 透過`form = FormBuilder.group({})`產生一個新的`FormGroup`。
-- 綁定到`<form></form>`中。
+- 繫結到`<form></form>`中。
   - `<form [formGroup]="form"`
-- `<form></form>`內部`Control`以`formControlName`，子`FormGroup`以`fromGroupName`綁定：
+- `<form></form>`內部`Control`以`formControlName`，子`FormGroup`以`fromGroupName`繫結：
   - `<input formControlName="name">`
   - `<div formGroupName="address">`
 

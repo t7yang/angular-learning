@@ -34,7 +34,7 @@ $ ng serve --open
 
 
 ### ``` src ```資料夾
-你主要的開發內容會放在``` src ```資料夾內，透過``` ng generate xxx ```你可以快速在``` src ```資料夾中建立諸如component、service、module、pipe等Angular項目。
+你主要的開發內容會放在``` src ```資料夾內，透過``` ng generate xxx ```你可以快速在``` src ```資料夾中建立諸如Component、service、Module、Pipe等Angular項目。
 
 
 ### 你還需要知道的事
@@ -46,4 +46,4 @@ $ ng serve --open
   - Angular Language Service
     - 在模板提供智慧提示（Intellisense）
   - AngularDoc for Visual Studio Code
-    - 在側邊欄自動執行ng xxx 指令，`ng generate component`
+    - 在側邊欄自動執行ng xxx 指令，`ng generate Component`
