@@ -156,9 +156,15 @@ export class HeroFormComponent {
 ### 狀態追蹤與驗證、錯誤訊息與停用
 控制項每分每秒都有可能隨著使用者的輸入產生異動，其狀態也自然不斷地在改變。與其等使用者千辛萬苦填完整份表單後才一次過的顯示所有錯誤訊息，針對每一個控制項即時地告訴使用者狀態是否符合要求更能有好的使用經驗。
 
-上面說過，在模板驅動表單的情況下，Angular 接管控制項的方式是透過`name`屬性。因此，決定錯誤訊息是否要顯示也必須依賴`name`屬性的值。
+還記得取得表單實體時需要建立一個模板變數指派給`ngForm`嗎？控制項的也是類似的，只是 Directive 換成了 ngModel
 
 ```html
+<input type="text" class="form-control" id="name"
+       required
+       [(ngModel)]="model.name" name="name"
+       #name="ngModel">
+       <!-- 透過把模板變數指派給 #name="ngModel" 就可以取得控制項的實體 -->
+       <!-- 在透過實體的狀態成員來決定是否顯示錯誤訊息 -->
 <div [hidden]="name.valid || name.pristine"
      class="alert alert-danger">
   Name is required
@@ -177,7 +183,8 @@ export class HeroFormComponent {
 透過模板變數指派給`ngForm`後，即可以取得模板中的表單實體，同樣透過表單當下的狀態來決定［送出］按鈕是否停用。
 
 > #### `ngForm`
-> `ngForm`會很智慧逐一檢查表單內的所有控制項，並即時改變每個狀態布林值。
+> `ngForm`會很智慧逐一檢查表單內的所有控制項，
+> 並即時根據每個控制項的狀態來改變自己的狀態。
 > 我們只需要會用，剩下的就交給 Angular 的黑魔法。
 
 
