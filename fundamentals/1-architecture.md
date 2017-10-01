@@ -4,7 +4,10 @@
 
 Angular 是一個前端的類 MVC 架構，AngularJS 作為當初最先進的前端架構之一不得不面臨一次革命性的更新，因此 Angular 在整體結構上和 AngularJS 有非常大的變化，如果你沒有 AngularJS 的包袱，那學習上可以免去一些觀念上的轉換。下圖是官方用來闡述 Angular 整體架構的範例圖。
 
+
 ![Angular Architecture](https://angular.io/generated/images/guide/architecture/overview2.png)
+
+從技術堆疊（technology stack）上來說 Angular 和 AngularJS 最大的差異主要來自於 Angular 全面使用 TypeScript 作為開發階段的語言（最終仍然會編譯為 JavaScript）。由 TypeScript 所帶來的最明顯的變化就是模組化，由 AngularJS 的只需要匯入一個 JS 當可以開始開發執行到，目前 Angular 把不同功能拆分成不同 TypeScript / JavaScript 模組（@angular/core, @angular/forms……）。
 
 
 ## 模組
